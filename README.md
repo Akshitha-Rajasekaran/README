@@ -1,2 +1,17 @@
 # README
 AI defense framework
+Introduction
+This project mainly focuses on detecting malicious prompts which degrade the quality of the software by directing the software to unwanted esposure of software's condidential information, bypass safety policies, override system instructions. Through this project, companies which run different compilcated softwares can improve their software quality by managing the correct and malicious prompts.
+In order for the software to detect malicious prompts, we have embedded 
+known malicious user inputs in the form of predefined patterns using 
+regular expressions, organized under specific categories such as system 
+instruction override, role manipulation, and data exfiltration. Each 
+category is assigned a risk factor based on the severity and potential 
+impact of the attack. When a user prompt is received, it is evaluated 
+against these patterns to identify any suspicious behavior and compute 
+an overall risk score. Based on this risk factor, the software 
+dynamically determines the appropriate response—either blocking 
+high-risk prompts entirely, sanitizing moderately risky inputs, or 
+allowing low-risk prompts to proceed safely. This layered risk-based 
+approach ensures strong protection against prompt injection attacks 
+while maintaining usability for legitimate user requests. 
